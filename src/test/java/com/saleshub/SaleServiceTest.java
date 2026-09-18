@@ -1,0 +1,2 @@
+package com.saleshub; import org.junit.jupiter.api.Test; import java.math.*; import static org.junit.jupiter.api.Assertions.*; import com.saleshub.service.DiscountPolicy;
+class SaleServiceTest { @Test void quantityDiscount(){var p=new DiscountPolicy();assertEquals(new BigDecimal("10.00"),p.calculate(new BigDecimal("100"),5,null,null));} @Test void discountCannotExceedSubtotal(){var p=new DiscountPolicy();assertEquals(new BigDecimal("25.00"),p.calculate(new BigDecimal("100"),10,null,"BEMVINDO10"));} }
